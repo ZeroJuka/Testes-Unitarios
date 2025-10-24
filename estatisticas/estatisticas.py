@@ -15,6 +15,8 @@ def mediana(lista):
     """
     if not lista:
         raise ValueError("A lista não pode estar vazia")
+    if any(not isinstance(x, (int, float)) for x in lista):
+        raise TypeError("A lista deve conter apenas números")
     lista.sort()
     n = len(lista)
     if n % 2 == 0:
@@ -45,3 +47,4 @@ def detectar_outliers(lista):
 
 
 #print(detectar_outliers([1, 99, 100, 98,  97, 99, 99]))
+#print(mediana([1, "b", "c"]))
