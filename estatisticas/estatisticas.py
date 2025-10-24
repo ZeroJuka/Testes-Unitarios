@@ -44,4 +44,4 @@ def detectar_outliers(lista):
     return [x for x in lista if abs(x - m) > 2 * dp]
 
 
-print(detectar_outliers([1, 99, 100, 98,  97, 99, 99]))
+#print(detectar_outliers([1, 99, 100, 98,  97, 99, 99]))
